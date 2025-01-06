@@ -1,0 +1,56 @@
+.side-bar {
+     background-color: white;
+     flex: 0 0 30%;
+     height: 100%;
+     border-right: 1px solid #d1d7db;
+}
+
+.header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 64px;
+     background-color: white;
+     padding-left: 16px;
+     padding-right: 10px;
+}
+
+.header h1 {
+     font-size: 21px;
+     font-weight: 700;
+}
+
+.header div {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     padding: 0 2px;
+}
+
+.header svg {
+     color: #54656f;
+}
+
+
+@media (max-width: 1000px) {
+
+     .header {
+          height: 55px;
+     }
+
+     .header h1 {
+          font-size: 19px;
+     }
+
+     .header div {
+          display: flex;
+          align-items: center;
+          gap: 0px;
+          padding: 0 2px;
+     }
+
+     .header svg {
+          height: 20px;
+     }
+
+}

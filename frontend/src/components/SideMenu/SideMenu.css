@@ -1,0 +1,117 @@
+.side-menu {
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+     align-items: center;
+     width: 64px;
+     height: 100%;
+     padding: 12px;
+     background-color: #f0f2f5;
+}
+
+.side-menu ul {
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     /* margin-top: 10px; */
+}
+
+.side-menu ul li {
+     display: flex;
+     position: relative;
+     justify-content: center;
+     align-items: center;
+     height: 40px;
+     width: 40px;
+     padding: 5px;
+     border-radius: 50%;
+     cursor: pointer;
+}
+
+.side-menu ul li::before {
+     content: attr(data-title);
+     position: absolute;
+     left: 50px;
+     top: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 13px;
+     padding: 3px 14px !important;
+     color: white;
+     border: 1px solid black;
+     border-radius: 15px;
+     background-color: #222;
+     opacity: 0;
+     scale: 0;
+     z-index: 99;
+     transform-origin: left;
+     transition: scale .2s ease-in-out;
+     pointer-events: none;
+}
+
+.side-menu ul li:hover::before {
+     transition-delay: .45s;
+     min-width: 50px;
+     scale: 1;
+     opacity: 1;
+}
+
+
+.side-menu ul li.active {
+     background-color: rgba(11, 20, 26, .1);
+}
+
+.side-menu li .nav-icon,
+i {
+     color: #54656f;
+     pointer-events: none;
+     opacity: 1;
+     z-index: 1;
+}
+
+#Profile {
+     padding: 5px;
+}
+
+#Profile img {
+     /* display: none; */
+     border-radius: 50%;
+     padding: 4px;
+     background: rgb(50, 50, 50);
+     width: 33px;
+}
+
+
+
+
+@media (max-width: 1000px) {
+
+     .side-menu {
+          width: 55px;
+     }
+
+     .side-menu ul li {
+          display: flex;
+          position: relative;
+          justify-content: center;
+          align-items: center;
+          height: 30px;
+          width: 30px;
+          padding: 5px;
+          border-radius: 50%;
+          cursor: pointer;
+     }
+
+     .side-menu ul li::before {
+          left: 40px;
+          top: 3px;
+     }
+
+     #Profile img {
+          padding: 2px;
+          width: 28px;
+     }
+
+}
