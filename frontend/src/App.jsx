@@ -72,7 +72,6 @@ import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 import './App.css';
 import Login from './pages/Auth/Login';
 import Chat from './pages/Chat/Chat';
-import ProfileUpdate from './pages/ProfileUpdate/ProfileUpdate';
 import { Flip, ToastContainer } from 'react-toastify';
 import { useContext } from 'react';
 import { AppContext } from './context/AppContext';
@@ -109,7 +108,6 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={!token ? <Login /> : <Chat />} />
-                    <Route path="/profile" element={<ProfileUpdate />} />
                     <Route path="/chat" element={!token ? <Navigate to="/" /> : <Chat />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>

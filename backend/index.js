@@ -9,7 +9,6 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const Users = require("./models/Users");
 
-// const app = express();
 app.use(cors({
      origin: 'https://real-time-chat-frontend-chi.vercel.app'
 }));
