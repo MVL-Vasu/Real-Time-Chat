@@ -11,7 +11,7 @@ const upload = require('../utils/Upload');
 const app = express();
 
 const corsOptions = {
-     origin: 'https://real-time-chat-frontend-lime.vercel.app', // your frontend URL
+     origin: 'https://real-time-chat-frontend-chi.vercel.app', // your frontend URL
      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
      allowedHeaders: ['Content-Type', 'Authorization'], // Include all headers you're using
 };
@@ -21,7 +21,7 @@ app.use(cors(corsOptions));
 const server = http.createServer(app);
 const io = new Server(server, {
      cors: {
-          origin: "https://real-time-chat-95rp.vercel.app"
+          origin: "https://real-time-chat-frontend-chi.vercel.app"
      }
 });
 

@@ -11,7 +11,7 @@ const Users = require("./models/Users");
 
 // const app = express();
 app.use(cors({
-     origin: 'https://real-time-chat-frontend-lime.vercel.app'
+     origin: 'https://real-time-chat-frontend-chi.vercel.app'
 }));
 
 app.use(express.json());
